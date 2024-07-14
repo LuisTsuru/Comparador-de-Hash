@@ -1,7 +1,7 @@
 import hashlib
 import secrets
 
-
+#Função para comparar os dados.
 def decrypt():
     with open("database-teste.txt", "r") as file:
         for linha in file:
@@ -12,7 +12,8 @@ def decrypt():
                     if hash_teste == linha.strip():
                         print(f"{linha} = {linha2}")
                         break
-            
+                        
+#Função para registrar novos Hashes e Senhas nos arquivos de texto.
 def register():
     num = int(input("Digite quantas senhas deseja registrar: "))
     for i in range(num):
@@ -24,5 +25,6 @@ def register():
             file.write(f"{password_hashed}\n")
         
 if __name__ == "__main__":
+    #"Descomente" quando quiser adicionar senhas e hashes novos aos arquivos de texto
     #register()
     decrypt()
