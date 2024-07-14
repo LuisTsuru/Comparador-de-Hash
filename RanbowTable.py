@@ -12,18 +12,17 @@ def decrypt():
                     if hash_teste == linha.strip():
                         print(f"{linha} = {linha2}")
                         break
-# def debug():
-#     with open("rainbowtable.txt", "r") as file:
-#         for linhas in file:
-#             hash1 = linhas.strip()
-#             hash = hashlib.sha256(hash1.encode()).hexdigest()
-#             print(hash)
             
-# def register(passwd):
-#     password_hashed = hashlib.sha256(passwd.encode()).hexdigest()
-#     with open("database-teste.txt", "a") as file:
-#         file.write(f"{password_hashed}\n")
+def register():
+    num = int(input("Digite quantas senhas deseja registrar: "))
+    for i in range(num):
+        passwd = input("Digite a senha: ")
+        with open("rainbowtable.txt", "a") as file:
+            file.write(f"{passwd}\n")
+        password_hashed = hashlib.sha256(passwd.encode()).hexdigest()
+        with open("database-teste.txt", "a") as file:
+            file.write(f"{password_hashed}\n")
         
 if __name__ == "__main__":
+    #register()
     decrypt()
-  
