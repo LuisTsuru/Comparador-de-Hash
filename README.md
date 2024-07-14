@@ -7,7 +7,9 @@ O repositorio contém:
 
 
 O codigo possui duas funções:
+
     register():
     Essa função quando utilizada pergunta quantas senhas deseja registrar e logo em seguida te permite "registra-las". Após inserir as senhas, elas serão registradas em "plaintext" e em formato hash nos arquivos "rainbowtable.txt" e "database-teste.txt" respectivamente.
+    
     decrypt():
     Ira pegar os hashs do arquivo "database-teste.txt" e comparar com as senhas "plaintext" do arquivo "rainbowtable.txt". Caso o hash seja o mesmo o arquivo ira printar o hash e o seu "plain text".
